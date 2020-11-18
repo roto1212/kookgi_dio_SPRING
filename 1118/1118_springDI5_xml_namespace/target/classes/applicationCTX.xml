@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="student" class="com.koreait.springDI5_xml_namespace.Student">
+
+	<constructor-arg value="홍길동"/>  
+	<constructor-arg value="12"/>  
+	<constructor-arg>
+		<list>
+			<value>게임</value>
+			<value>탁구</value>
+			<value>농구</value>
+		</list>
+	</constructor-arg>
+	
+	<property name="height" value="185"/>
+	<property name="weight" value="88"/>
+</bean>
+<bean id="student2" class="com.koreait.springDI5_xml_namespace.Student">
+
+	<constructor-arg value="임꺽정"/>  
+	<constructor-arg value="18"/>  
+	<constructor-arg>
+		<list>
+			<value>java</value>
+			<value>jsp</value>
+			<value>spring</value>
+		</list>
+	</constructor-arg>
+	
+	<property name="height" value="199"/>
+	<property name="weight" value="150"/>
+</bean>
+<bean id="student3" class="com.koreait.springDI5_xml_namespace.Student">
+
+	<constructor-arg value="홍길동"/>  
+	<constructor-arg value="12"/>  
+	<constructor-arg>
+		<list>
+			<value>게임</value>
+			<value>탁구</value>
+			<value>농구</value>
+		</list>
+	</constructor-arg>
+	
+	<property name="height" value="185"/>
+	<property name="weight" value="88"/>
+</bean>
+
+<bean id="studentInfo" class="com.koreait.springDI5_xml_namespace.StudentInfo">
+	<constructor-arg ref="student"/>
+		
+</bean>
+</beans>

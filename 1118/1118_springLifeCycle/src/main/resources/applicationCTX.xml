@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+
+<!-- 기본 생성자를 실행하는 bean을 만들어 setter 메소드로 멤버변수를 초기화시킨다. -->
+	<bean id="person1" class="com.koreait.springLifeCycle.Person">
+		<property name="name" value="홍길동"/>
+		<property name="age" value="20"/>
+	</bean>
+<!-- name, age 를 넘겨받는 생성자를 실행하는 bean을 만들어 멤버변수를 초기화시킨다. -->	
+	<bean id="person2" class="com.koreait.springLifeCycle.Person">
+		<constructor-arg value="임꺽정"/>
+		<constructor-arg value="35"/>
+		
+	</bean>
+</beans>
