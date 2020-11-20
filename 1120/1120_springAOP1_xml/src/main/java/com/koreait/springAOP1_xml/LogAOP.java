@@ -30,7 +30,7 @@ public class LogAOP {
 		System.out.println("LogAOP 클래스의 after() 메소드가 실행됨");
 	}
 	
-//	around
+//	around (* pom.xml의 <!-- AOP 드라이버 설정 -->에서 scope가 있다면 지워줘야 ProceedingJoinPoint 클래스를 사용할 수 있다.)
 //	1. around AOP 메소드는 핵심기능이 실행되고 난 후 리턴되는 데이터 타입을 예측할 수 없으므로 반드시 리턴타입을 모든 데이터타입을 포함하는 자바의 최상위 클래스인 Object로 지정해야 한다.
 //	2. around AOP 메소드의 매개변수로 실행할 핵심기능(메소드)이 넘어온다. => 반드시 매개변수로  ProceedingJoinPoint 인터페이스 타입의 객체를 사용한다.
 //	3. around AOP 메소드는 try ~ finally 형태로 실행되며 catch 블록은 throws Throwable로 대체 한다.
